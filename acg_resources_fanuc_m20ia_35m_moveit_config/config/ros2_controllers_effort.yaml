@@ -1,0 +1,53 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 1000  # Hz
+
+    fanuc_m20ia_35m_slide_to_end_effector_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+    
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+
+fanuc_m20ia_35m_slide_to_end_effector_controller:
+  ros__parameters:
+    joints:
+      - joint_world_to_slider
+      - fanuc_m20ia_35m_joint1
+      - fanuc_m20ia_35m_joint2
+      - fanuc_m20ia_35m_joint3
+      - fanuc_m20ia_35m_joint4
+      - fanuc_m20ia_35m_joint5
+      - fanuc_m20ia_35m_joint6
+    command_interfaces:
+      - effort
+    state_interfaces:
+      - position
+      - velocity
+    
+    open_loop_control: false
+
+    gains.joint_world_to_slider.p: 190000.0
+    gains.joint_world_to_slider.i: 8000.0
+    gains.joint_world_to_slider.d: 5000.0 
+    gains.fanuc_m20ia_35m_joint1.d: 10000.0
+    gains.fanuc_m20ia_35m_joint1.i: 20000.0 
+    gains.fanuc_m20ia_35m_joint1.p: 350000.0
+    gains.fanuc_m20ia_35m_joint2.d: 10000.0 
+    gains.fanuc_m20ia_35m_joint2.i: 8000.0
+    gains.fanuc_m20ia_35m_joint2.p: 300000.0
+    gains.fanuc_m20ia_35m_joint3.d: 10000.0 
+    gains.fanuc_m20ia_35m_joint3.i: 10000.0 
+    gains.fanuc_m20ia_35m_joint3.p: 800000.0
+    gains.fanuc_m20ia_35m_joint4.d: 100.0 
+    gains.fanuc_m20ia_35m_joint4.i: 200.0 
+    gains.fanuc_m20ia_35m_joint4.p: 5000.0
+    gains.fanuc_m20ia_35m_joint5.d: 150.0 
+    gains.fanuc_m20ia_35m_joint5.i: 5000.0
+    gains.fanuc_m20ia_35m_joint5.p: 100000.0
+    gains.fanuc_m20ia_35m_joint6.d: 70.0
+    gains.fanuc_m20ia_35m_joint6.i: 150.0 
+    gains.fanuc_m20ia_35m_joint6.p: 2000.0 
+
+ 

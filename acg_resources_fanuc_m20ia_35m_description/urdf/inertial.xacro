@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Load inertial properties. Property is implicitly passed to macros. -->
+  <xacro:property name="inertial_config" value="$(find acg_resources_fanuc_m20ia_35m_description)/config/inertial.yaml"/>
+  <xacro:property name="inertial" value="${xacro.load_yaml(inertial_config)}"/>
+
+  <xacro:macro name="inertial_props" params="name inertial:=^">
+      <xacro:unless value="${name in inertial}">${xacro.warning('No inertia properties defined for: ' + name)}</xacro:unless>
+      <xacro:if value="${name in inertial}">
+        <!-- Access inertia properties of link 'name' -->
+        <xacro:property name="inertial" value="${inertial[name]}" lazy_eval="false" />
+        <inertial>
+          <origin rpy="${inertial.origin.rpy}" xyz="${inertial.origin.xyz}" />
+          <mass value="${inertial.mass}" />
+          <xacro:property name="I" value="${inertial.inertia}" />
+          <inertia ixx="${I.xx}" ixy="${I.xy}" ixz="${I.xz}" iyy="${I.yy}" iyz="${I.yz}" izz="${I.zz}" />
+        </inertial>
+      </xacro:if>
+  </xacro:macro>
+
+</robot>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>fanuc_m20ia_35m_planning_demo</name>
+  <version>0.0.0</version>
+  <description>A planning package to plan a path based on the communication of an external server, the server must provide the
+  'set_trajectory' interface and have to store the path in a bagfile. Uses moveit capabilities to generate the trajectory from the path</description>
+  <maintainer email="g.intonti@studenti.unisa.it">Giovanni Intonti</maintainer>
+  <maintainer email="d.risi2@studenti.unisa.it">Davide Risi</maintainer>
+  <maintainer email="g.barone36@studenti.unisa.it">Guglielmo Barone</maintainer>
+  <maintainer email="a.pagano93@studenti.unisa.it">Adolfo Pagano</maintainer>  <license>TODO: License declaration</license>
+
+  <author email="g.intonti@studenti.unisa.it">Giovanni Intonti</author>
+  <author email="d.risi2@studenti.unisa.it">Davide Risi</author>
+  <author email="g.barone36@studenti.unisa.it">Guglielmo Barone</author>
+  <author email="a.pagano93@studenti.unisa.it">Adolfo Pagano</author>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <license>GPLv3</license>
+
+
+  <depend>action_tutorials_interfaces</depend>
+  <depend>rclcpp</depend>
+  <depend>rclcpp_action</depend>
+  <depend>rclcpp_components</depend>
+  <depend>moveit_msgs</depend>
+  <depend>moveit_ros_planning_interface</depend>
+  <depend>moveit_visual_tools</depend>
+  <depend>trajectory_interfaces</depend>
+  <depend>rosbag2_cpp</depend>
+  <depend>call_analysis_interface</depend>
+  <depend>action_cartesian_trajectory</depend>
+  <depend>control_msgs</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

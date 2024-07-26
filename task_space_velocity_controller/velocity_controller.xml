@@ -1,0 +1,7 @@
+<library path="velocity_controller">
+  <class name="velocity_controller/VelocityController" type="velocity_controller::VelocityController" base_class_type="controller_interface::ControllerInterface">
+    <description>
+      This is a velocity controller.
+    </description>
+  </class>
+</library>

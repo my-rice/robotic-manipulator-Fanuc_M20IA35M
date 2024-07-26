@@ -1,0 +1,33 @@
+planning_plugin: ompl_interface/OMPLPlanner
+start_state_max_bounds_error: 0.1
+jiggle_fraction: 0.05
+request_adapters: >-
+    default_planner_request_adapters/AddTimeOptimalParameterization
+    default_planner_request_adapters/ResolveConstraintFrames
+    default_planner_request_adapters/FixWorkspaceBounds
+    default_planner_request_adapters/FixStartStateBounds
+    default_planner_request_adapters/FixStartStateCollision
+    default_planner_request_adapters/FixStartStatePathConstraints
+
+planner_configs:
+   RRTstar:
+    type: geometric::RRTstar
+    range: 0.0  
+    goal_bias: 0.05  
+    delay_collision_checking: 1 
+  
+
+fanuc_m20ia_35m_slide_to_drilling:
+  default_planner_config: RRTstar
+  planner_configs:
+    - RRTstar
+  
+  enforce_joint_model_state_space: false
+  
+
+fanuc_m20ia_35m_slide_to_fastening:
+  default_planner_config: RRTstar
+  planner_configs:
+    - RRTstar
+  
+  enforce_joint_model_state_space: false

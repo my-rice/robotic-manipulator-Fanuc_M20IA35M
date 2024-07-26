@@ -1,0 +1,19 @@
+Series,Current,Min,Max,Average
+Start Time,-1.79769e+308
+End Time,1.79769e+308
+Current Time,1.70732e+09
+/joint_states/fanuc_m20ia_35m_joint1/position,0.293564,-0.061164,0.395497,0.274067
+/joint_states/fanuc_m20ia_35m_joint1/velocity,-0.202344,-0.388753,0.264958,0.009479
+/joint_states/fanuc_m20ia_35m_joint2/position,-1.304344,-1.306989,-1.246629,-1.297158
+/joint_states/fanuc_m20ia_35m_joint2/velocity,0.178776,-0.232481,0.223032,-0.001479
+/joint_states/fanuc_m20ia_35m_joint3/position,-0.855331,-0.862748,-0.814087,-0.847000
+/joint_states/fanuc_m20ia_35m_joint3/velocity,-0.591254,-0.619048,0.573890,-0.001516
+/joint_states/fanuc_m20ia_35m_joint4/position,-0.467267,-0.523292,-0.402503,-0.469101
+/joint_states/fanuc_m20ia_35m_joint4/velocity,-0.117825,-0.653752,0.828153,0.000341
+/joint_states/fanuc_m20ia_35m_joint5/position,1.228160,1.063822,1.301858,1.216620
+/joint_states/fanuc_m20ia_35m_joint5/velocity,1.222487,-1.964873,1.983449,0.004219
+/joint_states/fanuc_m20ia_35m_joint6/position,0.006637,-0.050412,0.039181,-0.005464
+/joint_states/fanuc_m20ia_35m_joint6/velocity,-0.897506,-1.722812,1.481566,-0.000032
+/joint_states/header/stamp,38.743000,2.621000,38.743000,20.702085
+/joint_states/joint_world_to_slider/position,0.225727,-0.064954,0.248318,0.116816
+/joint_states/joint_world_to_slider/velocity,0.112158,-0.129804,0.128485,0.005822

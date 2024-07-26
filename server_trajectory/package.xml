@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>server_trajectory</name>
+  <version>0.0.0</version>
+  <description>A service server package that performs comunication with a planning script to create a path in the space, it returns the result of the execution</description>
+  <maintainer email="g.intonti@studenti.unisa.it">giovanni</maintainer>
+  <maintainer email="d.risi2@studenti.unisa.it">Davide Risi</maintainer>
+  <maintainer email="g.barone36@studenti.unisa.it">Guglielmo Barone</maintainer>
+  <maintainer email="a.pagano93@studenti.unisa.it">Adolfo Pagano</maintainer>  
+
+  <author email="g.intonti@studenti.unisa.it">Giovanni Intonti</author>
+  <author email="d.risi2@studenti.unisa.it">Davide Risi</author>
+  <author email="g.barone36@studenti.unisa.it">Guglielmo Barone</author>
+  <author email="a.pagano93@studenti.unisa.it">Adolfo Pagano</author>
+  <license>GPLv3</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>trajectory_interfaces</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

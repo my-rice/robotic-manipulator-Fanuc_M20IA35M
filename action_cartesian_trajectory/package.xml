@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>action_cartesian_trajectory</name>
+  <version>0.0.0</version>
+  <description> A package that contains the action message for the cartesian trajectory</description>
+  <maintainer email="g.intonti@studenti.unisa.it">giovanni</maintainer>
+  <maintainer email="d.risi2@studenti.unisa.it">Davide Risi</maintainer>
+  <maintainer email="g.barone36@studenti.unisa.it">Guglielmo Barone</maintainer>
+  <maintainer email="a.pagano93@studenti.unisa.it">Adolfo Pagano</maintainer>  
+
+  <author email="g.intonti@studenti.unisa.it">Giovanni Intonti</author>
+  <author email="d.risi2@studenti.unisa.it">Davide Risi</author>
+  <author email="g.barone36@studenti.unisa.it">Guglielmo Barone</author>
+  <author email="a.pagano93@studenti.unisa.it">Adolfo Pagano</author>
+
+  <license>GPLv3</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend> rosidl_default_generators</buildtool_depend>
+  <build_depend>moveit_msgs</build_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <depend>action_msgs</depend>
+
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

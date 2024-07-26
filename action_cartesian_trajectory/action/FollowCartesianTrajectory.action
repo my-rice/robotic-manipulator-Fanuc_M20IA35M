@@ -1,0 +1,14 @@
+# Request
+moveit_msgs/CartesianTrajectory trajectory
+---
+# Result
+int32 error_code
+int32 SUCCESSFUL = 0
+int32 INVALID_GOAL = -1
+int32 INVALID_POSE = -2
+int32 OLD_HEADER_TIMESTAMP = -3
+---
+# Feedback
+moveit_msgs/CartesianTrajectoryPoint  desired
+moveit_msgs/CartesianTrajectoryPoint  actual
+moveit_msgs/CartesianTrajectoryPoint  error

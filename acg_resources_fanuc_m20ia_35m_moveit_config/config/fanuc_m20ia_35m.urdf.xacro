@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="fanuc_m20ia_35m">
+    <xacro:arg name="initial_positions_file" default="$(find acg_resources_fanuc_m20ia_35m_moveit_config)/config/initial_positions.yaml" />
+    <xacro:arg name="initial_velocities_file" default="$(find acg_resources_fanuc_m20ia_35m_moveit_config)/config/initial_velocities.yaml" />
+    <xacro:arg name="initial_efforts_file" default="$(find acg_resources_fanuc_m20ia_35m_moveit_config)/config/initial_efforts.yaml" />
+    <xacro:arg name="use_mock_hardware" default="true" />
+    <xacro:arg name="use_effort_interface" default="true" />
+    <xacro:arg name="end_effector" default="'drilling_tool'" />
+
+    <!-- Import fanuc_m20ia_35m urdf file -->
+    <xacro:include filename="$(find acg_resources_fanuc_m20ia_35m_description)/urdf/fanuc_m20ia_35m.xacro" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="$(find acg_resources_fanuc_m20ia_35m_moveit_config)/config/fanuc_m20ia_35m.ros2_control.xacro" />
+    <gazebo>
+        <self_collide>1</self_collide>
+    </gazebo>
+
+    <xacro:fanuc_m20ia_35m_ros2_control 
+        name="FakeSystem" 
+        initial_positions_file="$(arg initial_positions_file)" 
+        initial_velocities_file="$(arg initial_velocities_file)" 
+        initial_efforts_file="$(arg initial_efforts_file)"
+        use_mock_hardware="$(arg use_mock_hardware)"
+        use_effort_interface="$(arg use_effort_interface)"
+        end_effector="$(arg end_effector)"/>
+        
+</robot>

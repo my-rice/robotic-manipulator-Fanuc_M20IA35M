@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>acg_resources_fanuc_m20ia_35m_description</name>
+  <version>0.0.0</version>
+  <description>FanucM20ia/35M description used by group 2 of Robotics class at the University of Salerno </description>
+  <maintainer email="g.intonti@studenti.unisa.it">Giovanni Intonti</maintainer>
+  <maintainer email="d.risi2@studenti.unisa.it">Davide Risi</maintainer>
+  <maintainer email="g.barone36@studenti.unisa.it">Guglielmo Barone</maintainer>
+  <maintainer email="a.pagano93@studenti.unisa.it">Adolfo Pagano</maintainer>
+
+  <license> GPLv3 </license>
+  <url type="repository">https://bitbucket.org/robotics-group2/unisa_acg_ros2_group2</url>
+
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <exec_depend>joint_state_publisher_gui</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
+
